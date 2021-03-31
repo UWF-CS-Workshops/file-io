@@ -1,0 +1,20 @@
+{
+  "id": 1001001,
+  "firstname": "Susie",
+  "languages": [
+    {
+      "lang": "English",
+      "knowledge": "proficient"
+    },
+    {
+      "lang": "French",
+      "knowledge": "advanced"
+    }
+  ],
+  "job": {
+    "site": "www.uwf.edu",
+    "name": "University of West Florida"
+  }
+}
+
+

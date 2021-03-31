@@ -1,0 +1,36 @@
+/* 1 */ import java.io.File;
+/* 2 */ import java.io.IOException;
+/* 3 */ import java.io.PrintWriter;
+/* 4 */ import java.util.Scanner;
+/* 5 */ 
+/* 6 */ public class LineNumberer
+/* 7 */ {
+/* 8 */    public static void main(String[] args)
+/* 9 */    {
+/* 10 */       Scanner console = new Scanner(System.in);
+/* 11 */       System.out.print("Input file: ");
+/* 12 */       String inputFileName = console.next();
+/* 13 */       System.out.print("Output file: ");
+/* 14 */       String outputFileName = console.next();
+/* 15 */ 
+/* 16 */       try
+/* 17 */       {
+/* 18 */          Scanner in = new Scanner(new File(inputFileName));
+/* 19 */          PrintWriter out = new PrintWriter(outputFileName);
+/* 20 */          int lineNumber = 1;
+/* 21 */          
+/* 22 */          while (in.hasNextLine())
+/* 23 */          {
+/* 24 */             String line = in.nextLine();
+/* 25 */             out.println("/* " + lineNumber + " */ " + line);
+/* 26 */             lineNumber++;
+/* 27 */          }
+/* 28 */ 
+/* 29 */          out.close();
+/* 30 */       }
+/* 31 */       catch (IOException exception)
+/* 32 */       {
+/* 33 */          System.out.println("Error processing file: " + exception);
+/* 34 */       }
+/* 35 */    }
+/* 36 */ }
